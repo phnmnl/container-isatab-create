@@ -11,7 +11,7 @@ ADD run_test.sh /usr/local/bin/run_test.sh
 ADD input_params.json /input_params.json
 RUN chmod +x /usr/local/bin/run_test.sh
 
-ADD run_tab2json.py /usr/local/bin/cli.py
+ADD cli.py /usr/local/bin/cli.py
 RUN chmod a+x /usr/local/bin/cli.py
 
 ENTRYPOINT ["cli.py"]
