@@ -8,4 +8,9 @@ if ! [ -e "/i_investigation.txt" ]; then
 	exit 1
 fi
 
+if ! [ -e "/s_study.txt" ]; then
+	echo "Output study file doesn't exist"
+	exit 1
+fi
+
 echo "All files created successfully"
