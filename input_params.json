@@ -1,0 +1,39 @@
+{
+    "sampling_and_assay_plans": {
+        "sample_record_series": [
+            {
+                "sample_size": 1,
+                "assay_record_series": [],
+                "sample_type": {
+                    "sample_type": "sweat"
+                }
+            },
+            {
+                "sample_size": 3,
+                "assay_record_series": [],
+                "sample_type": {
+                    "sample_type": "sweat"
+                }
+            }
+        ]
+    },
+    "treatment_plan": {
+        "study_group_size": 3,
+        "study_type_cond": {
+            "study_type": "intervention",
+            "one_or_more": {
+                "single_or_multiple": "single",
+                "intervention_type": {
+                    "duration": "",
+                    "intensity": "",
+                    "select_intervention_type": "chemical intervention",
+                    "agent": ""
+                }
+            }
+        },
+        "group_balanced": "balanced"
+    },
+    "qc_plan": {
+        "qc_record_series": []
+    }
+}
