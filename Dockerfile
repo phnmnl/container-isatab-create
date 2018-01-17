@@ -7,6 +7,8 @@ LABEL software.version="0.9.3"
 LABEL version="0.1"
 LABEL software="isatab-create"
 
+RUN pip3 install click==6.7
+
 ADD run_test.sh /usr/local/bin/run_test.sh
 ADD input_params.json /input_params.json
 RUN chmod +x /usr/local/bin/run_test.sh
