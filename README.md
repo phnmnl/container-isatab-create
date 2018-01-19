@@ -9,7 +9,7 @@ A container the `isatools.create.models` module of the [ISA-API](http://github.c
 
 ## Description
 
-The ISA-API is a Python 3 library that can create, manipulate, and convert ISA-formatted content. In the `isatools.create.models` module there is functionality to create ISA-Tab data from experimental design objects. This is wrapped up as the `container-isatab-create` container.
+The ISA-API is a Python 3 library that can create, manipulate, and convert ISA-formatted content. In the `isatools.create.models` module, there is functionality to create ISA-Tab datasets from experimental design objects. It supports both MS and NMR applications. This is wrapped up as the `container-isatab-create` container.
 
 ## Key features
 
@@ -17,7 +17,17 @@ The ISA-API is a Python 3 library that can create, manipulate, and convert ISA-f
 
 ## Functionality
 
-- Other Tools
+- Data Management / Study Metadata Creation from Study Design
+
+## Approaches
+
+- Metabolomics
+- Isotopic Labelling Analysis
+
+## Instrument Data Types
+
+- MS
+- NMR
 
 ## Tool Authors
 
@@ -26,6 +36,7 @@ The ISA-API is a Python 3 library that can create, manipulate, and convert ISA-f
 ## Container Contributors
 
 - [David Johnson](https://github.com/djcomlab) (University of Oxford)
+- [Philippe Rocca-Serra](https://github.com/proccaserra) (University of Oxford)
 
 ## Website
 
