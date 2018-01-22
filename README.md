@@ -1,7 +1,7 @@
 ![Logo](isa-api_logo.png)
 
 # isatab-create: ISA Create tool for Metabolomics
-Version: 0.9.3
+Version: 0.9.4
 
 ## Short Description
 
