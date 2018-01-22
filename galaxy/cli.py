@@ -125,31 +125,9 @@ class SampleAssayPlanDecoder(object):
               prompt='Path to JSON Galaxy parameters file', nargs=1, type=str,
               default='create_params.json')
 def create_from_plan_parameters(parameters_file):
-    with open(parameters_file) as fp:
-        tool_params = json.load(fp)
-    if tool_params is None:
-        raise IOError('Could not load tool parameters file')
-    sample_and_assay_plans = {
-        "sample_types": [],
-        "group_size": 1,
-        "sample_plan": [],
-        "sample_qc_plan": [],
-        "assay_types": [],
-        "assay_plan": []
-    }
-    for sample_plan_params in tool_params[
-        'sampling_and_assay_plans']['sample_record_series']:
-        sample_plan = {
-            'sample_type': sample_plan_params['sample_type']['sample_type'],
-            'sampling_size': sample_plan_params['sample_size']
-        }
-        sample_and_assay_plans['sample_types'].append(
-            sample_plan['sample_type'])
-        sample_and_assay_plans['sample_plan'].append(sample_plan)
-    sample_and_assay_plans['group_size'] = tool_params[
-        'treatment_plan']['study_group_size']
     decoder = SampleAssayPlanDecoder()
-    plan = decoder.load(io.StringIO(json.dumps(sample_and_assay_plans)))
+    with open(parameters_file) as fp:
+        plan = decoder.load(fp)
     treatment_factory = TreatmentFactory(
         intervention_type=INTERVENTIONS['CHEMICAL'], factors=BASE_FACTORS)
     agent_levels = 'calpol, none'

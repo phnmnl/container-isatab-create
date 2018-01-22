@@ -1,39 +1,53 @@
 {
-    "sampling_and_assay_plans": {
-        "sample_record_series": [
-            {
-                "sample_size": 1,
-                "assay_record_series": [],
-                "sample_type": {
-                    "sample_type": "sweat"
-                }
+    "sample_types": ["liver", "tissue", "water"],
+    "group_size": 20,
+    "sample_plan": [
+        {
+            "sampling_size": 3,
+            "sample_type": "liver"
+        },
+        {
+            "sampling_size": 5,
+            "sample_type": "tissue"
+        }
+    ],
+    "sample_qc_plan": [
+        {
+            "injection_interval": 8,
+            "sample_type": "water"
+        }
+    ],
+    "assay_types": [
+        {
+            "topology_modifiers": {
+                "technical_replicates": 2,
+                "array_designs": ["A-AFFY-27", "A-AFFY-28"]
             },
-            {
-                "sample_size": 3,
-                "assay_record_series": [],
-                "sample_type": {
-                    "sample_type": "sweat"
-                }
-            }
-        ]
-    },
-    "treatment_plan": {
-        "study_group_size": 3,
-        "study_type_cond": {
-            "study_type": "intervention",
-            "one_or_more": {
-                "single_or_multiple": "single",
-                "intervention_type": {
-                    "duration": "",
-                    "intensity": "",
-                    "select_intervention_type": "chemical intervention",
-                    "agent": ""
-                }
+            "technology_type": "DNA microarray",
+            "measurement_type": "genome sequencing"
+        }],
+    "assay_plan": [
+        {
+            "sample_type": "liver",
+            "assay_type": {
+                "topology_modifiers": {
+                    "technical_replicates": 2,
+                    "array_designs": ["A-AFFY-27", "A-AFFY-28"]
+                },
+                "technology_type": "DNA microarray",
+                "measurement_type": "genome sequencing"
             }
         },
-        "group_balanced": "balanced"
-    },
-    "qc_plan": {
-        "qc_record_series": []
-    }
+        {
+            "sample_type": "tissue",
+            "assay_type": {
+                "topology_modifiers": {
+                    "technical_replicates": 2,
+                    "array_designs": ["A-AFFY-27", "A-AFFY-28"]
+                },
+                "technology_type": "DNA microarray",
+                "measurement_type": "genome sequencing"
+            }
+        }
+    ]
 }

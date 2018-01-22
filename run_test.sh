@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python cli.py /input_params.json
+galaxy/python cli.py /input_params.json
 
 # check that files were created
 if ! [ -e "/i_investigation.txt" ]; then
