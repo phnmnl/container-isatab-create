@@ -145,10 +145,10 @@ def create_from_plan_parameters(parameters_file):
     isa_object_factory = IsaModelObjectFactory(plan, treatment_sequence)
     s = isa_object_factory.create_assays_from_plan()
     i = Investigation()
-    s.filename = "s_study.txt"
+    s.filename = "/s_study.txt"
     i.studies = [s]
     os.mkdir('isa')
-    isatab.dump(isa_obj=i, output_path='isa', i_file_name='i_investigation.txt')
+    isatab.dump(isa_obj=i, output_path='isa', i_file_name='/i_investigation.txt')
 
 
 if __name__ == '__main__':
