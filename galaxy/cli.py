@@ -123,7 +123,7 @@ class SampleAssayPlanDecoder(object):
 @click.option('--parameters_file',
               help='Path to JSON file containing input Galaxy tool parameters',
               prompt='Path to JSON Galaxy parameters file', nargs=1, type=str,
-              default='create_params.json')
+              default='input_params.json')
 def create_from_plan_parameters(parameters_file):
     decoder = SampleAssayPlanDecoder()
     with open(parameters_file) as fp:
