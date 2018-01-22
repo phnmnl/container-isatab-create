@@ -61,7 +61,7 @@ docker pull docker-registry.phenomenal-h2020.eu/phnmnl/isatab-create
 
 Basic usage:
 ```bash
-docker run docker-registry.phenomenal-h2020.eu/phnmnl/isatab-create --parameters_file <galaxy_json_parameters>
+docker run docker-registry.phenomenal-h2020.eu/phnmnl/isatab-create --parameters_file <json_parameters>
 ```
 
 ## Publications
