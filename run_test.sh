@@ -2,7 +2,7 @@
 
 cli.py --parameters_file /input_params.json
 
-# check that files were created
+#  check that files were created
 if ! [ -e "/i_investigation.txt" ]; then
 	echo "Output investigation file doesn't exist"
 	exit 1
