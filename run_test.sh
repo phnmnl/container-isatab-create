@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cli.py --parameters_file /input_params.json
+cli.py --parameters_file /input_params.json --target_dir /
 
 # check that files were created
 if ! [ -e "/i_investigation.txt" ]; then
