@@ -14,7 +14,6 @@ RUN git clone --depth 1 --single-branch -b refactor https://github.com/ISA-tools
 ENV PATH=$PATH:/files/galaxy
 
 ADD run_test.sh /usr/local/bin/run_test.sh
-ADD /files/galaxy/input_params.json /input_params.json
 RUN chmod +x /usr/local/bin/run_test.sh
 
 ADD /files/galaxy/cli.py /usr/local/bin/cli.py
