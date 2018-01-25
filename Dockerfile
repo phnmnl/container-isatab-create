@@ -16,7 +16,7 @@ ENV PATH=$PATH:/files/galaxy
 ADD run_test.sh /usr/local/bin/run_test.sh
 RUN chmod +x /usr/local/bin/run_test.sh
 
-ADD /files/galaxy/cli.py /usr/local/bin/cli.py
+RUN cp /files/galaxy/cli.py /usr/local/bin/cli.py
 RUN chmod a+x /usr/local/bin/cli.py
 
 ENTRYPOINT ["cli.py"]
