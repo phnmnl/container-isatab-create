@@ -20,6 +20,4 @@ if ! [ -e "/out/a_plasma_nmr_1D 1H NMR_wet_assay.txt" ]; then
 	exit 1
 fi
 
-a_plasma_nmr_1D 1H NMR_wet_assay.txt
-
 echo "All files created successfully"
