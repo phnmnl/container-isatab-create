@@ -17,6 +17,7 @@ fi
 
 if ! [ -e "/out/a_plasma_nmr_1D 1H NMR_wet_assay.txt" ]; then
 	echo "Output assay file doesn't exist"
+	ls /out/
 	exit 1
 fi
 
