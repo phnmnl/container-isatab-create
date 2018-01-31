@@ -4,7 +4,7 @@ mkdir /out
 
 cli.py --galaxy_parameters_file=/files/galaxy/test-data/galaxy_inputs.json --target_dir=/out/
 
-# check that files were created
+#  check that files were created
 if ! [ -e "/out/i_investigation.txt" ]; then
 	echo "Output investigation file doesn't exist"
 	exit 1
