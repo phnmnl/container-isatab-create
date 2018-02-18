@@ -3,10 +3,12 @@ FROM isatools/isatools:3.6-alpine-0.9.5
 LABEL maintainer="PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )"
 LABEL description="Tools to create ISA-Tab from experiment plans"
 LABEL software.version="0.9.5"
-LABEL version="0.3.6"
+LABEL version="0.3.7"
 LABEL software="isatab-create"
 
 RUN pip3 install click==6.7
+RUN pip3 uninstall isatools
+RUN pip3 install git+git://github.com/ISA-tools/isa-api.git@feat/metabo_create_model#egg=isatools
 
 RUN apk add --no-cache --virtual git-deps git openssh \
     && git clone --depth 1 --single-branch -b master https://github.com/ISA-tools/isatools-galaxy /files/galaxy \
