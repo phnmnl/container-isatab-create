@@ -7,7 +7,7 @@ LABEL version="0.3.7"
 LABEL software="isatab-create"
 
 RUN pip3 install click==6.7
-RUN pip3 uninstall isatools
+RUN pip3 uninstall isatools -y
 RUN pip3 install git+git://github.com/ISA-tools/isa-api.git@feat/metabo_create_model#egg=isatools
 
 RUN apk add --no-cache --virtual git-deps git openssh \
