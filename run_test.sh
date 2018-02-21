@@ -2,7 +2,7 @@
 
 mkdir /out
 
-cli.py --galaxy_parameters_file=/files/galaxy/test-data/galaxy_inputs.json --target_dir=/out/
+cli.py --galaxy_parameters_file=/files/galaxy/isa_create_metabo/test-data/galaxy_inputs.json --target_dir=/out/
 
 # check that files were created
 if ! [ -e "/out/i_investigation.txt" ]; then
