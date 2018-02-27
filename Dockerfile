@@ -3,7 +3,7 @@ FROM isatools/isatools:3.6-alpine-0.9.5
 LABEL maintainer="PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )"
 LABEL description="Tools to create ISA-Tab from experiment plans"
 LABEL software.version="0.9.5"
-LABEL version="0.3.8"
+LABEL version="0.3.9"
 LABEL software="isatab-create"
 
 RUN pip3 install click==6.7
