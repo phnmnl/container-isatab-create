@@ -5,11 +5,16 @@ Version: 0.9.5
 
 ## Short Description
 
-A container the `isatools.create.models` module of the [ISA-API](http://github.com/ISA-tools/isa-api)
+A container the `isatools.create.models` module of the 
+[ISA-API](http://github.com/ISA-tools/isa-api)
 
 ## Description
 
-The ISA-API is a Python 3 library that can create, manipulate, and convert ISA-formatted content. In the `isatools.create.models` module, there is functionality to create ISA-Tab datasets from experimental design objects. It supports both MS and NMR applications. This is wrapped up as the `container-isatab-create` container.
+The ISA-API is a Python 3 library that can create, manipulate, and convert 
+ISA-formatted content. In the `isatools.create.models` module, there is 
+functionality to create ISA-Tab datasets from experimental design objects. It 
+supports both MS and NMR applications. This is wrapped up as the 
+`container-isatab-create` container.
 
 ## Key features
 
@@ -61,7 +66,7 @@ docker pull docker-registry.phenomenal-h2020.eu/phnmnl/isatab-create
 
 Basic usage:
 ```bash
-docker run docker-registry.phenomenal-h2020.eu/phnmnl/isatab-create --parameters_file <json_parameters>
+docker run docker-registry.phenomenal-h2020.eu/phnmnl/isatab-create --galaxy_parameters_file <galaxy_json_parameters>
 ```
 
 ## Publications
