@@ -11,7 +11,7 @@ RUN pip3 uninstall isatools -y
 
 RUN apk add --no-cache --virtual git-deps git openssh \
     && git clone --depth 1 --single-branch -b 0.1-cbln1.1 https://github.com/ISA-tools/isatools-galaxy /files/galaxy \
-    && pip3 install git+git://github.com/ISA-tools/isa-api.git@feature/metabo_create_model#egg=isatools \
+    && pip3 install git+git://github.com/ISA-tools/isa-api.git@feat/metabo_create_model#egg=isatools \
     && apk del git-deps \
     && rm -rf /var/cache/apk/* \
     && rm -rf /tmp/* /var/tmp/*
