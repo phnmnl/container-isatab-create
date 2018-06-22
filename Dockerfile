@@ -1,18 +1,16 @@
-FROM isatools/isatools:3.6-alpine-0.9.5
+FROM isatools/isatools:3.6-alpine-0.10-develop
 
 LABEL maintainer="PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )"
 LABEL description="Tools to create ISA-Tab from experiment plans"
-LABEL software.version="0.9.5"
-LABEL version="0.3.14"
+LABEL software.version="0.10-develop"
+LABEL version="0.5.0"
 LABEL software="isatab-create"
 
 
 RUN pip3 install click==6.7
-RUN pip3 uninstall isatools -y
 
 RUN apk add --no-cache --virtual git-deps git openssh \
-    && git clone --depth 1 --single-branch -b 0.1-cbln1.1 https://github.com/ISA-tools/isatools-galaxy /files/galaxy \
-    && pip3 install git+git://github.com/ISA-tools/isa-api.git@v0.9.5-cbln1.1#egg=isatools \
+    && git clone --depth 1 --single-branch -b develop https://github.com/ISA-tools/isatools-galaxy /files/galaxy \
     && apk del git-deps \
     && rm -rf /var/cache/apk/* \
     && rm -rf /tmp/* /var/tmp/*
@@ -22,7 +20,7 @@ ENV PATH=$PATH:/files/galaxy
 ADD run_test.sh /usr/local/bin/run_test.sh
 RUN chmod +x /usr/local/bin/run_test.sh
 
-RUN cp /files/galaxy/tools/create_metabo/cli.py /usr/local/bin/cli.py
-RUN chmod a+x /usr/local/bin/cli.py
+RUN cp /files/galaxy/tools/isacreate/isacreate.py /usr/local/bin/isacreate.py
+RUN chmod a+x /usr/local/bin/isacreate.py
 
-ENTRYPOINT ["cli.py"]
+ENTRYPOINT ["isacreate.py"]

@@ -2,7 +2,7 @@
 
 mkdir /out
 
-cli.py --galaxy_parameters_file=/files/galaxy/tools/create_metabo/test-data/galaxy_inputs.json --target_dir=/out/
+isacreate.py --galaxy_parameters_file=/files/galaxy/tools/isacreate/test-data/default_ms_gc.json --target_dir=/out/
 
 #  check that files were created
 if ! [ -e "/out/i_investigation.txt" ]; then
@@ -15,15 +15,8 @@ if ! [ -e "/out/s_study.txt" ]; then
 	exit 1
 fi
 
-if ! [ -e "/out/a_plasma_polar_DI_negative_assay.txt" ]; then
-	echo "Output assay file doesn't exist"
-	ls /out/
-	exit 1
-fi
-
-
-if ! [ -e "/out/a_plasma_non-polar_DI_negative_assay.txt" ]; then
-	echo "Output assay file doesn't exist"
+if ! [ -e "/out/a_blood_non-polar_GC_negative_assay.txt" ]; then
+	echo "Output GC_negative assay file doesn't exist"
 	ls /out/
 	exit 1
 fi
