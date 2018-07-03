@@ -7,11 +7,13 @@ isacreate.py --galaxy_parameters_file=/files/galaxy/tools/isacreate/test-data/de
 #  check that files were created
 if ! [ -e "/out/i_investigation.txt" ]; then
 	echo "Output investigation file doesn't exist"
+	ls /out/
 	exit 1
 fi
 
 if ! [ -e "/out/s_study.txt" ]; then
 	echo "Output study file doesn't exist"
+	ls /out/
 	exit 1
 fi
 
