@@ -1,9 +1,9 @@
-FROM isatools/isatools:3.6-alpine-0.10.0
+FROM isatools/isatools:3.6-alpine-0.10.2
 
 LABEL maintainer="PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )"
 LABEL description="Tools to create ISA-Tab from experiment plans"
-LABEL software.version="0.10.0"
-LABEL version="0.5.3"
+LABEL software.version="0.10.2"
+LABEL version="0.5.4"
 LABEL software="isatab-create"
 
 
